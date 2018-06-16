@@ -10,6 +10,7 @@ gem 'rails', '~> 5.2.0'
 gem 'bcrypt', '~> 3.1.12'
 
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'attr_encrypted', '~> 3.1.0'
 gem 'jwt'
 gem 'rack-cors', require: 'rack/cors'
 gem 'simple_command'
