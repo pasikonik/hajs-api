@@ -36,7 +36,7 @@ module Api
       end
 
       def user_params
-        ActiveModelSerializers::Deserialization.jsonapi_parse(params, only: [:email, :username, :password, :ban])
+        ActiveModelSerializers::Deserialization.jsonapi_parse(params) # TODO: refactor
       end
     end
   end

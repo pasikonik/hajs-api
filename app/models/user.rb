@@ -3,4 +3,5 @@ class User < ApplicationRecord
   attr_encrypted :ban, key: Rails.application.secrets.encrypted_key
 
   belongs_to :place, optional: true
+  has_many :payments, inverse_of: :user
 end

@@ -4,7 +4,7 @@ module Api
       skip_before_action :authenticate_request
 
       def token
-        cmd = AuthenticateUser.call(credentials['identificator'], credentials['password'])
+        cmd = AuthenticateUser.call(credentials['identification'], credentials['password'])
 
         if cmd.success?
           render json: { token: cmd.result }
@@ -16,7 +16,7 @@ module Api
       private
 
       def credentials
-        params.permit(:identificator, :password)
+        params.permit(:identification, :password)
       end
     end
   end
