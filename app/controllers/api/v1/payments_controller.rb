@@ -21,7 +21,7 @@ module Api
       end
 
       def date
-        month, year = rent_params[:month_param].spit(' ')
+        month, year = rent_params[:month].split(' ')
         Time.parse("01-#{month}-#{year}")
       end
 

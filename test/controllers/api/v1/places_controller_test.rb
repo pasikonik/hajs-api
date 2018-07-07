@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PlacesControllerTest < ActionDispatch::IntegrationTest
+class Api::V1::PlacesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
