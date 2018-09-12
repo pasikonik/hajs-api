@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_16_140230) do
+ActiveRecord::Schema.define(version: 2018_09_12_170357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,9 @@ ActiveRecord::Schema.define(version: 2018_06_16_140230) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "bill_id"
+    t.bigint "place_id"
     t.index ["bill_id"], name: "index_payments_on_bill_id"
+    t.index ["place_id"], name: "index_payments_on_place_id"
     t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
@@ -58,12 +60,14 @@ ActiveRecord::Schema.define(version: 2018_06_16_140230) do
     t.string "username"
     t.string "encrypted_ban"
     t.string "encrypted_ban_iv"
+    t.integer "max_pay"
     t.index ["email"], name: "index_users_on_email"
   end
 
   add_foreign_key "bills", "payments"
   add_foreign_key "bills", "places"
   add_foreign_key "payments", "bills"
+  add_foreign_key "payments", "places"
   add_foreign_key "payments", "users"
   add_foreign_key "places", "users"
 end
