@@ -6,7 +6,7 @@ module Api
       end
 
       def show
-        render json: Place.find(params[:id]), include: params[:include]
+        render json: Place.find(params[:id]), include: '**'
       end
 
       def create

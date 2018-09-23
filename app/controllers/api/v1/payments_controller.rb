@@ -5,6 +5,7 @@ module Api
         Payment.find(params[:id])
       end
 
+      # TODO: refactor
       def create_rent
         irregular_users = place.users.reject { |u| u.max_pay.nil? }
         rest_users = place.users - irregular_users
