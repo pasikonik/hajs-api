@@ -5,6 +5,15 @@ module Api
         Payment.find(params[:id])
       end
 
+      def update
+        payment = Payment.find(params[:id])
+        if payment.update(payment_params)
+          render json: payment, status: :ok
+        else
+          render json: { errors: payment.errors }, status: :unprocessable_entity
+        end
+      end
+
       # TODO: refactor
       def create_rent
         irregular_users = place.users.reject { |u| u.max_pay.nil? }
@@ -43,6 +52,10 @@ module Api
 
       def rent_params
         params.permit(:place_id, :month)
+      end
+
+      def payment_params
+        ActiveModelSerializers::Deserialization.jsonapi_parse!(params, only: [:status])
       end
     end
   end
