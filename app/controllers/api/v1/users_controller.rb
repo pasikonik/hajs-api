@@ -17,9 +17,7 @@ module Api
       end
 
       def update
-        user = User.find(params[:id])
-        password = user_params[:password]
-        return unless check_password(user, password)
+        return unless check_password(user_params[:password])
         user_params.except!(:password)
 
         if user.update!(user_params)
@@ -31,7 +29,11 @@ module Api
 
       private
 
-      def check_password(user, password)
+      def user
+        User.find(params[:id])
+      end
+
+      def check_password(password)
         user.authenticate(password) ? true : false
       end
 

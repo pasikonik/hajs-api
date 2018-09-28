@@ -38,7 +38,7 @@ module Api
         user.payments.create(amount: amount,
                              place: place,
                              created_at: date,
-                             status: 'wait')
+                             status: status(user))
       end
 
       def place
@@ -48,6 +48,10 @@ module Api
       def date
         month, year = rent_params[:month].split(' ')
         Time.parse("01-#{month}-#{year}")
+      end
+
+      def status(user)
+        place.payer == user ? 'paid' : 'wait'
       end
 
       def rent_params
