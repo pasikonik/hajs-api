@@ -18,6 +18,7 @@ module Api
 
       def update
         return unless check_password(user_params[:password])
+
         user_params.except!(:password)
 
         if user.update!(user_params)
