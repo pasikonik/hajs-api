@@ -17,4 +17,4 @@ production:
   <<: *default
   database: hajsapp_production
   username: hajsapp
-  password: <%= ENV['HAJS-API_DATABASE_PASSWORD'] %>
+  password: <%= ENV['HAJSAPP_DB_PASSWORD'] %>
