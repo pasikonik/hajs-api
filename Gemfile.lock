@@ -77,6 +77,9 @@ GEM
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.1.4)
@@ -218,6 +221,7 @@ DEPENDENCIES
   capistrano (~> 3.10)
   capistrano-bundler (~> 1.4)
   capistrano-rails (~> 1.4)
+  capistrano-rvm
   factory_bot_rails
   faker
   jwt
