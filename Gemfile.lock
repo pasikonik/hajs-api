@@ -216,6 +216,7 @@ DEPENDENCIES
   bullet
   byebug
   capistrano (~> 3.10)
+  capistrano-bundler (~> 1.4)
   capistrano-rails (~> 1.4)
   factory_bot_rails
   faker
