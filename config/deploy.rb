@@ -1,10 +1,10 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.11.0"
+lock '~> 3.11.0'
 
-set :application, "hajsapp"
-set :repo_url, "git@github.com:pasikonik/hajs-api.git"
+set :application, 'hajsapp'
+set :repo_url, 'git@github.com:pasikonik/hajs-api.git'
 
-set :linked_files, %w{config/master.key}
+append :linked_files, 'config/master.key'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
