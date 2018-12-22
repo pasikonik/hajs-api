@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "vps628229.ovh.net", user: "deploy", roles: %w{app db}
+server "hajsapp.pl", user: "deploy", roles: %w{app db}
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
@@ -17,9 +17,9 @@ server "vps628229.ovh.net", user: "deploy", roles: %w{app db}
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{vps628229.ovh.net}
-# role :web, %w{vps628229.ovh.net}
-role :db,  %w{vps628229.ovh.net}
+role :app, %w{hajsapp.pl}
+# role :web, %w{hajsapp.pl}
+role :db,  %w{hajsapp.pl}
 
 
 
