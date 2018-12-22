@@ -5,7 +5,11 @@ set :application, 'hajsapp'
 set :repo_url, 'git@github.com:pasikonik/hajs-api.git'
 
 append :linked_files, 'config/master.key'
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/sockets'
+append :linked_dirs, 'log', 'pids', 'sockets'
+
+set :puma_state, "#{shared_path}/pids/puma.state"
+set :puma_pid, "#{shared_path}/pids/puma.pid"
+set :puma_bind, "unix://#{shared_path}/sockets/puma.sock"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
