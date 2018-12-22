@@ -1,7 +1,5 @@
 
 server 'hajsapp.pl', user: 'deploy', roles: %w{app db}
-# server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
-# server 'db.example.com', user: 'deploy', roles: %w{db}
 
 role :app, %w{hajsapp.pl}
 role :db,  %w{hajsapp.pl}
