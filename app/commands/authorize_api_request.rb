@@ -15,7 +15,7 @@ class AuthorizeApiRequest
   end
 
   def decode_auth_token
-    @decode_auth_token ||= JsonWebToken.decode(http_auth_header)
+    @decode_auth_token ||= ::JsonWebToken.decode(http_auth_header)
   end
 
   def http_auth_header
