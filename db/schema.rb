@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_23_191211) do
+ActiveRecord::Schema.define(version: 2018_12_27_181505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2018_09_23_191211) do
     t.string "encrypted_ban"
     t.string "encrypted_ban_iv"
     t.integer "max_pay"
+    t.boolean "payer"
     t.index ["email"], name: "index_users_on_email"
   end
 

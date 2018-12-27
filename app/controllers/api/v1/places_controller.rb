@@ -12,7 +12,7 @@ module Api
       def create
         place = Place.new(place_params)
         if place.save
-          add_owner_as_a_member(place)
+          add_payer(place)
           render json: place, status: :ok
         else
           render json: { errors: place.errors }, status: :unprocessable_entity
@@ -21,7 +21,8 @@ module Api
 
       private
 
-      def add_owner_as_a_member(place)
+      def add_payer(place)
+        current_user.update!(payer: true)
         place.users << current_user
         place.save
       end
