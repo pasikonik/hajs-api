@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
+  TargetRubyVersion: 2.6
 
 Documentation:
   Enabled: false
