@@ -39,7 +39,8 @@ module Api
       end
 
       def user_params
-        ActiveModelSerializers::Deserialization.jsonapi_parse(params) # TODO: refactor
+        ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+                                               .merge(payer: false)
       end
     end
   end
