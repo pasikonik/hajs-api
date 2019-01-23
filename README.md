@@ -1,24 +1,13 @@
-# README
+# HajsApp (backend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is backend part of hajsapp.
 
-Things you may want to cover:
+## Stack
 
-* Ruby version
+| rails | ruby | postgres |  
+|-------|------|----------|
+| 5.2.2 | 2.6  | 11.1     |
 
-* System dependencies
+## Frontend part
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://github.com/pasikonik/hajs-front
