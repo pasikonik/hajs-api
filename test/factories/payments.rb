@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :payment do
-    type ""
+    type { 'paid' }
   end
 end

@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :bill do
-    name "MyString"
+    name { 'Internet' }
   end
 end
