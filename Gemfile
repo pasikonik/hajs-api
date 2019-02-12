@@ -7,10 +7,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
 
-gem 'bcrypt', '~> 3.1.12'
-
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'attr_encrypted', '~> 3.1.0'
+gem 'bcrypt', '~> 3.1.12'
 gem 'jwt'
 gem 'rack-cors', require: 'rack/cors'
 gem 'simple_command'
@@ -25,6 +24,7 @@ end
 
 group :development do
   gem 'awesome_print'
+  gem 'brakeman' # TEST IT
   gem 'bullet'
   gem 'capistrano', '~> 3.10',        require: false
   gem 'capistrano-bundler', '~> 1.4', require: false
@@ -34,6 +34,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'traceroute'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
