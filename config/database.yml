@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: hajs-api_development
+  database: hajsapp_development
 
 test:
   <<: *default
-  database: hajs-api_test
+  database: hajsapp_test
 
 production:
   <<: *default
