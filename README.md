@@ -4,9 +4,9 @@ This is backend part of hajsapp.
 
 ## Stack
 
-| rails | ruby  | postgres |  
-|-------|-------|----------|
-| 5.2.2 | 2.6.1 | 11.1     |
+| rails | ruby  | postgres | API spec     |
+|-------|-------|----------|--------------|
+| 5.2.2 | 2.6.1 | 11.1     | JSONAPI v1.0 |
 
 ## Frontend part
 
