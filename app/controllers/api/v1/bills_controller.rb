@@ -3,8 +3,8 @@ module Api
     class BillsController < ApplicationController
       def create
         bill = Bill.new(bill_params)
-        byebug
         if bill.save
+          create_payments(bill)
           render json: bill, status: :ok
         else
           render json: { errors: bill.errors }, status: :unprocessable_entity
@@ -16,7 +16,7 @@ module Api
       def create_payments(bill)
         amount = (bill.amount / bill.users.size).ceil
         bill.users.each do |user|
-          user.create_payment(amount: amount, status: status(user))
+          user.payments.create(amount: amount, status: status(user))
         end
       end
 
