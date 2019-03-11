@@ -16,7 +16,10 @@ module Api
       def create_payments(bill)
         amount = (bill.amount / bill.users.size).ceil
         bill.users.each do |user|
-          user.payments.create(amount: amount, status: status(user))
+          user.payments.create!(amount: amount,
+                                status: status(user),
+                                bill: bill,
+                                place: bill.place)
         end
       end
 

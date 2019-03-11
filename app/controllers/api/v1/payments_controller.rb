@@ -35,10 +35,10 @@ module Api
       private
 
       def create_rent_for_user(user, amount)
-        user.payments.create(amount: amount,
-                             place: place,
-                             created_at: date,
-                             status: status(user))
+        user.payments.create!(amount: amount,
+                              place: place,
+                              created_at: date,
+                              status: status(user))
       end
 
       def place
