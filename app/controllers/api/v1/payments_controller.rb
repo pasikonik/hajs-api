@@ -5,6 +5,11 @@ module Api
         Payment.find(params[:id])
       end
 
+      def index
+        payments = Payment.where(bill_id: params[:bill_id])
+        render json: payments, status: :ok
+      end
+
       def update
         payment = Payment.find(params[:id])
         if payment.update(payment_params)
@@ -23,13 +28,17 @@ module Api
         rest_amount = place.rent - irregular_amount
         amount = (rest_amount / rest_users.count).ceil
 
+        rents = []
+
         irregular_users.each do |user|
-          create_rent_for_user(user, user.max_pay)
+          rents << create_rent_for_user(user, user.max_pay)
         end
 
         rest_users.each do |user|
-          create_rent_for_user(user, amount)
+          rents << create_rent_for_user(user, amount)
         end
+
+        render json: rents, status: :ok
       end
 
       private

@@ -3,4 +3,5 @@ class PlaceSerializer < ActiveModel::Serializer
 
   has_many :users
   has_many :bills
+  has_many :payments
 end

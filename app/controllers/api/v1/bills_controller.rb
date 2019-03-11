@@ -5,7 +5,7 @@ module Api
         bill = Bill.new(bill_params)
         if bill.save
           create_payments(bill)
-          render json: bill, status: :ok
+          render json: bill, include: [:payments], status: :ok
         else
           render json: { errors: bill.errors }, status: :unprocessable_entity
         end

@@ -8,3 +8,9 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+# TODO: Enable bullet
+# if Bullet.enable?
+#   config.before(:each) { Bullet.start_request }
+#   config.after(:each)  { Bullet.end_request }
+# end
