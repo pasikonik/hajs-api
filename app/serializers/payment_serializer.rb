@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PaymentSerializer < ActiveModel::Serializer
   attributes :id, :amount, :status, :created_at
 

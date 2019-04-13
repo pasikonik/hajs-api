@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class PaymentsController < ApplicationController
@@ -56,7 +58,7 @@ module Api
 
       def date
         month, year = rent_params[:month].split(' ')
-        Time.parse("01-#{month}-#{year}")
+        Time.parse("01-#{month}-#{year}").in_time_zone
       end
 
       def status(user)

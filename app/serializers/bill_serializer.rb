@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BillSerializer < ActiveModel::Serializer
   attributes :id, :name, :amount, :created_at
 

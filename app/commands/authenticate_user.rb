@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticateUser
   prepend SimpleCommand
 
@@ -15,7 +17,7 @@ class AuthenticateUser
   attr_accessor :identificator, :password
 
   def user
-    user = User.find_by_email(identificator)
+    user = User.find_by(email: identificator)
     return user if user&.authenticate(password)
 
     errors.add :auth, 'wrong indenticator or password'

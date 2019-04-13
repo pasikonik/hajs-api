@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :add_members_to_place do
   task perform: :environment do
     place = Place.last
