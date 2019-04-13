@@ -2,8 +2,12 @@
 
 require 'test_helper'
 
-class Api::V1::AuthenticationControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+module Api
+  module V1
+    class AuthenticationControllerTest < ActionDispatch::IntegrationTest
+      # test "the truth" do
+      #   assert true
+      # end
+    end
+  end
 end

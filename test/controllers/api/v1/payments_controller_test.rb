@@ -2,9 +2,13 @@
 
 require 'test_helper'
 
-class Api::V1::PaymentsControllerTest < ActionDispatch::IntegrationTest
-  test 'should get create_rent' do
-    get payments_create_rent_url
-    assert_response :success
+module Api
+  module V1
+    class PaymentsControllerTest < ActionDispatch::IntegrationTest
+      test 'should get create_rent' do
+        get payments_create_rent_url
+        assert_response :success
+      end
+    end
   end
 end
