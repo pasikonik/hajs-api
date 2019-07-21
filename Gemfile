@@ -6,10 +6,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.0.1'
 gem 'rails', '~> 5.2.0'
 
-gem 'active_model_serializers', '~> 0.10.0'
+gem 'active_model_serializers', '~> 0.10.10'
 gem 'attr_encrypted', '~> 3.1.0'
 gem 'bcrypt', '~> 3.1.12'
 gem 'jwt'
