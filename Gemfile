@@ -26,7 +26,7 @@ end
 
 group :development do
   gem 'awesome_print'
-  gem 'brakeman' # TEST IT
+  gem 'brakeman'
   gem 'bullet'
   gem 'capistrano', '~> 3.10',        require: false
   gem 'capistrano-bundler', '~> 1.4', require: false
