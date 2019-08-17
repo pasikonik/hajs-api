@@ -30,7 +30,7 @@ module Api
       end
 
       def place_params
-        ActiveModelSerializers::Deserialization.jsonapi_parse(params, only: [:name, :rent])
+        ActiveModelSerializers::Deserialization.jsonapi_parse(params, only: %i[name rent])
       end
     end
   end
