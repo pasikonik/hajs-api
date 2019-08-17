@@ -7,7 +7,7 @@ ruby '2.6.3'
 
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.0.0'
 
 gem 'active_model_serializers', '~> 0.10.10'
 gem 'attr_encrypted', '~> 3.1.0'
