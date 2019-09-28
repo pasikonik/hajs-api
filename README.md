@@ -6,7 +6,7 @@ This is backend part of hajsapp.
 
 | rails | ruby  | postgres | API spec     |
 |-------|-------|----------|--------------|
-| 6.0.0 | 2.6.3 | 11.1     | JSONAPI v1.0 |
+| 6.0.0 | 2.6.3 | 11.5     | JSONAPI v1.0 |
 
 ## Frontend part
 
