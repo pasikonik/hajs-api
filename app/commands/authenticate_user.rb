@@ -3,9 +3,9 @@
 class AuthenticateUser
   prepend SimpleCommand
 
-  def initialize(identificator, password)
-    @identificator = identificator
-    @password = password
+  def initialize(credentials)
+    @identificator = credentials['identification']
+    @password = credentials['password']
   end
 
   def call

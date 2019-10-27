@@ -6,8 +6,7 @@ module Api
       skip_before_action :authenticate_request
 
       def token
-        cmd = AuthenticateUser.call(credentials['identification'], credentials['password'])
-
+        cmd = AuthenticateUser.call(credentials)
         if cmd.success?
           render json: { token: cmd.result }
         else
